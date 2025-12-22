@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.top-header {
+    background: linear-gradient(to right, rgb(255, 123, 0), rgb(248, 219, 0));
+    display: flex;
+    flex-direction: column;   /* สำคัญ: เรียงบน-ล่าง */
+    align-items: center;      /* จัดกึ่งกลางแนวนอน */
+    justify-content: center;  /* จัดกึ่งกลางแนวตั้ง */
+    padding: 60px 40px;
+}
+
+.logo  {
+    font-weight: bold;
+}
+
+.logo img {
+    height: 50px;
+    
+}
+body {
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+body {
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+/* กล่องหลัก */
+.signin-container {
+    background: #b3b3b3;
+    width: 1200px;
+    display: flex;
+    padding: 120px;
+    gap: 80px;
+}
+
+/* ฝั่งซ้าย */
+.signin-form {
+    flex: 1;
+}
+
+.signin-form h1 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: none;
+    background: #e6e6e6;
+}
+
+/* ลิงก์สมัคร */
+.register-link {
+    margin-bottom: 30px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* ปุ่ม */
+.buttons {
+    display: flex;
+    gap: 40px;
+}
+
+button {
+    padding: 10px 40px;
+    border: none;
+    background: #e6e6e6;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d0d0d0;
+}
+
+/* ฝั่งขวา */
+.signin-poster {
+    flex: 1;
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
