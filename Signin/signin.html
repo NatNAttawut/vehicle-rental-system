@@ -2,50 +2,94 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>มีรถหรือยัง?</title>
-    <link rel="stylesheet" href="/Signin/signin.css">
+    <title>Sign In - มีรถหรือยัง?</title>
+    <link rel="stylesheet" href="signin.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <!-- Header -->
     <header class="top-header">
         <div class="logo">
-        <a href="../index.html">
-        <img src="/IMG/LogoCodecraft.png" alt="Logo">
-         </a>
+            <a href="../index.html"><img src="/IMG/LogoCodecraft.png" alt="Logo"></a>
         </div>
         <h1>มีรถหรือยัง?</h1>
-        <div class="auth">
-        </div>
-
     </header>
-        <div class="signin-container">
 
-    <!-- ฝั่งซ้าย -->
-    <div class="signin-form">
-        <h1>Sign in</h1>
+    <div class="signin-container">
+        <div class="signin-form">
+            <h1>Sign in</h1>
 
-        <label>Username</label>
-        <input type="text">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="กรอกอีเมลของคุณ">
 
-        <label>Password</label>
-        <input type="password">
+            <label>Password</label>
+            <input type="password" id="loginPassword" placeholder="กรอกรหัสผ่าน">
 
-        <p class="register-link">
-            ยังไม่มีบัญชี? <a href="signup.html">สมัครสมาชิก</a>
-        </p>
+            <p class="register-link">
+                ยังไม่มีบัญชี? <a href="/Signup/sigup.html">สมัครสมาชิก</a>
+            </p>
 
-        <div class="buttons">
-            <button>Login</button>
-            <button type="button"><a href="../index.html">Cancel</a></button>
+            <div class="buttons">
+                <button type="button" onclick="handleLogin()">Login</button>
+                <a href="../index.html"><button type="button">Cancel</button></a>
+            </div>
+            
+            <p id="loginMessage" style="margin-top: 15px; color: white; font-weight: bold; text-align: center;"></p>
+        </div>
+
+        <div class="signin-poster">
+             <img src="/IMG/poster.jpg" alt="Poster" style="width: 100%; height: 100%; object-fit: cover; display: block;"> 
         </div>
     </div>
 
-    <!-- ฝั่งขวา -->
-    <div class="signin-poster">
-        รูปโปสเตอร์
-    </div>
+    <script>
+        // --- KEY ของคุณ ---
+        const supabaseUrl = 'https://ucpfkzoswswaxsiovxon.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVjcGZrem9zd3N3YXhzaW92eG9uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg3MDU1NjQsImV4cCI6MjA4NDI4MTU2NH0.z0C8t5V1CNfSQ1IaJwKRLFiAZR-K4m-uIFQQKA0P_Zg';
+        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-</div>
+        async function handleLogin() {
+            // 1. เช็คว่าปุ่มทำงานไหม
+            // alert("DEBUG: กำลังกดปุ่ม..."); 
 
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const msg = document.getElementById('loginMessage');
+
+            if (!email || !password) {
+                alert("⚠️ กรุณากรอก Email และ Password ให้ครบ");
+                return;
+            }
+
+            msg.innerText = '⏳ กำลังตรวจสอบข้อมูล...';
+            msg.style.color = 'yellow';
+
+            try {
+                // 2. ส่งข้อมูลไป Login
+                const { data, error } = await supabase.auth.signInWithPassword({
+                    email: email,
+                    password: password
+                });
+
+                if (error) {
+                    // ถ้า Login ไม่ผ่าน
+                    console.error("Login Error:", error);
+                    alert("❌ เข้าสู่ระบบไม่สำเร็จ:\n" + error.message); // เด้งบอก Error ชัดๆ
+                    msg.innerText = '❌ Error: ' + error.message;
+                    msg.style.color = 'red';
+                } else {
+                    // ถ้า Login ผ่าน
+                    alert("✅ Login สำเร็จ! กด OK เพื่อไปหน้าแรก");
+                    msg.innerText = '✅ สำเร็จ! กำลังพาไปหน้าแรก...';
+                    msg.style.color = '#00ff00';
+                    
+                    // 3. ย้ายหน้า
+                    // ลองเช็ค Path: ถ้าไฟล์ signin อยู่ในโฟลเดอร์ Signin ต้องถอย 1 ขั้น (../)
+                    window.location.href = '/User/Uindex.html'; 
+                }
+            } catch (err) {
+                alert("❌ เกิดข้อผิดพลาดร้ายแรง: " + err.message);
+            }
+        }
+    </script>
 </body>
 </html>
