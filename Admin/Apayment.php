@@ -82,8 +82,8 @@
                     </div>
 
                     <div class="action-buttons-pay">
-                        <a href="cushistory.html" class="btn-pay-confirm" style="text-decoration:none; display:inline-block; text-align:center;">ชำระเงิน</a>
-                        <a href="cardetail.html" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">ยกเลิก</a>
+                        <a href="Acushistory.php" class="btn-pay-confirm" style="text-decoration:none; display:inline-block; text-align:center;">ชำระเงิน</a>
+                        <a href="Acardetail.php" class="btn-cancel" style="text-decoration:none; display:inline-block; text-align:center;">ยกเลิก</a>
                     </div>
                 </div>
 

@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-info-box">
                     <p>คำอธิบายรถยนต์</p>
-                    <a href="cardetail.html" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
+                    <a href="Acardetail.php" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
                 </div>
             </div>
 
@@ -29,7 +29,7 @@
                 </div>
                 <div class="card-info-box">
                     <p>คำอธิบายรถยนต์</p>
-                    <a href="cardetail.html" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
+                    <a href="Acardetail.php" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                 </div>
                 <div class="card-info-box">
                     <p>คำอธิบายรถจักรยานยนต์</p>
-                    <a href="cardetail.html" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
+                    <a href="Acardetail.php" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
                 </div>
                 <div class="card-info-box">
                     <p>คำอธิบายรถจักรยานยนต์</p>
-                    <a href="cardetail.html" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
+                    <a href="Acardetail.php" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
                 </div>
             </div>
         </section>

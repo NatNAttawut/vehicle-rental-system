@@ -51,8 +51,8 @@
                 </div>
 
                 <div class="action-buttons">
-                    <a href="Cars.html" class="btn-back">ย้อนกลับ</a>
-                    <a href="payment.html" class="btn-order" style="text-decoration:none;">สั่งซื้อ</a>
+                    <a href="ACars.php" class="btn-back">ย้อนกลับ</a>
+                    <a href="Apayment.php" class="btn-order" style="text-decoration:none;">สั่งซื้อ</a>
                 </div>
 
             </div>

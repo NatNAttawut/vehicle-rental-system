@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html lang="th">
+<!DOCTYPE html>
+<html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>ข้อมูลส่วนตัว - มีรถหรือยัง?</title>
-    <link rel="stylesheet" href="style.css">
+    <title>มีรถหรือยัง?</title>
+    <link rel="stylesheet" href="Astyle.css">
 </head>
 <body>
 
-    <header class="top-header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="/IMG/LogoCodecraft.png" alt="Logo">
-            </a>
-        </div>
-        <h1>มีรถหรือยัง?</h1>
-        <div class="auth-user">
-            <span>นาย สมปอง ยาคู</span>
-            <span class="divider">|</span>
-            <a href="index.html" class="logout-link">Log out</a>
-        </div>
-    </header>
-
-    <nav class="menu">
-        <a href="Aindex.html">หน้าแรก</a>
-        <a href="ACars.html">รถยนต์</a>
-        <a href="Amotorcycle.html">มอเตอร์ไซค์</a>
-        <a href="AReccar.html">รถแนะนำ</a>
-        <a href="Acushistory.html">ประวัติ</a>
-        <a href="">แก้ไขข้อมูลรถ</a>
-        <a href="Acontact.html">ติดต่อ</a>
-
+    <?php include 'Aheader.php'; ?>
+    
     <main class="container">
         
         <div class="profile-page-header">
