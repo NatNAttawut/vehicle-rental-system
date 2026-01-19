@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>มีรถหรือยัง?</title>
+    <link rel="stylesheet" href="Astyle.css">
+</head>
+<body>
+
+    <?php include 'Aheader.php'; ?>
+    
+    <main class="container">
+        
+        <div class="profile-page-header">
+            <h2>ข้อมูลส่วนตัว</h2>
+        </div>
+
+        <div class="profile-layout">
+            
+            <div class="profile-left">
+                <div class="profile-img-container">
+                    <img src="https://via.placeholder.com/200x200?text=Profile+Image" alt="รูปโปรไฟล์">
+                </div>
+                <button class="btn-upload-profile">อัพโหลดรูปภาพ</button>
+            </div>
+
+            <div class="profile-right">
+                <form class="profile-form">
+                    <div class="p-form-row">
+                        <label>รหัสสมาชิก</label>
+                        <input type="text" value="" readonly> </div>
+                    <div class="p-form-row">
+                        <label>ชื่อ-นามสกุล</label>
+                        <input type="text" value="">
+                    </div>
+                    <div class="p-form-row">
+                        <label>เบอร์โทรศัพท์</label>
+                        <input type="text" value="">
+                    </div>
+                    <div class="p-form-row">
+                        <label>บ้านเลขที่</label>
+                        <input type="text" value="">
+                    </div>
+                    <div class="p-form-row">
+                        <label>ตำบล</label>
+                        <input type="text" value="">
+                    </div>
+                    <div class="p-form-row">
+                        <label>อำเภอ</label>
+                        <input type="text" value="">
+                    </div>
+                    <div class="p-form-row">
+                        <label>จังหวัด</label>
+                        <input type="text" value="">
+                    </div>
+                    <div class="p-form-row">
+                        <label>รหัสไปรษณีย์</label>
+                        <input type="text" value="">
+                    </div>
+                </form>
+
+                <div class="profile-actions">
+                    <button class="btn-save">บันทึก</button>
+                    <button class="btn-edit">แก้ไขข้อมูล</button>
+                </div>
+            </div>
+
+        </div>
+
+</html>

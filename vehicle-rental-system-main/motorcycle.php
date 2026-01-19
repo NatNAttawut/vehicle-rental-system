@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>มอเตอร์ไซค์ - มีรถหรือยัง?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <?php include 'header.php'; ?>
+
+    <main class="container">
+        <h2 class="page-title">รายการรถมอเตอร์ไซค์ให้เช่า</h2>
+
+        <section class="car-grid">
+            <div class="car-card">
+                <div class="card-img-box">รูปภาพรถ</div>
+                <div class="card-info-box">
+                    <p>คำอธิบายรถจักรยานยนต์</p>
+                    <a href="cardetail.php" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="card-img-box">รูปภาพรถ</div>
+                <div class="card-info-box">
+                    <p>คำอธิบายรถจักรยานยนต์</p>
+                    <a href="cardetail.php" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
+                </div>
+            </div>
+            
+            <div class="car-card">
+                <div class="card-img-box">รูปภาพรถ</div>
+                <div class="card-info-box">
+                    <p>คำอธิบายรถจักรยานยนต์</p>
+                    <a href="cardetail.php" class="btn-more" style="text-decoration: none; display:inline-block;">เพิ่มเติม</a>
+                </div>
+            </div>
+        </section>
+</html>
